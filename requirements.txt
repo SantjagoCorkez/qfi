@@ -1,0 +1,4 @@
+Flask>=0.11
+SQLAlchemy
+Flask-Login
+Flask-Principal

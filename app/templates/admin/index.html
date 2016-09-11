@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% set page_name = 'Admin Area' %}
+{% block body %}
+{% with messages = get_flashed_messages(with_categories=False) %}
+    {% for message in messages %}
+<div style="color: red">
+    {{ message }}
+</div>
+    {% endfor %}
+{% endwith %}
+<p>Invite someone to this site. Enter </p>
+<form action="{{ url_for('.send_invite') }}" method="post">
+    <label for="emailInput">Email</label>
+    <input type="text" name="email" id="emailInput"/><br/>
+    <button type="submit">Send invite</button>
+</form>
+{% endblock %}

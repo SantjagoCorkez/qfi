@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% set view_name = 'SignIn' %}
+{% block body %}
+{% with messages = get_flashed_messages(with_categories=False) %}
+    {% for message in messages %}
+<div style="color: red">
+    {{ message }}
+</div>
+    {% endfor %}
+{% endwith %}
+<p>Welcome! To commit a sign in please fill your data and proceed</p>
+<form action="{{ url_for('.commit') }}" method="post">
+    <input type="hidden" name="invite_id" value="{{ request.view_args['invite_id'] }}"/>
+    <label for="nameInput">Name: </label>
+    <input type="text" name="name" id="nameInput"/><br/>
+    <label for="passwordInput">Password: </label>
+    <input type="password" name="password" id="passwordInput"/><br/>
+    <button type="submit">Sign In</button>
+</form>
+{% endblock %}

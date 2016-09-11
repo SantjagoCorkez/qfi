@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% set page_name = 'Index' %}
+{% block body %}
+<form action="{{ url_for('Index.logout') }}">
+    <button type="submit">SignOut</button>
+</form>
+{% endblock %}

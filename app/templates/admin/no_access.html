@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% set page_name = 'Restricted Area' %}
+{% block body %}
+<p>This is highly restricted area. If you mislogged in using a wrong account you
+should follow the <a href="{{ url_for('Index.index') }}">Index Page</a>, log there out and log in
+using a proper account</p>
+{% endblock %}
