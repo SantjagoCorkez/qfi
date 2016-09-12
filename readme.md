@@ -13,6 +13,7 @@
 
 ### Run
 * for console run in debug mode just exec `python friend_inviter.py` from top level directory
+* default `admin` password is `derpasswort`
 
 
 ### Autotests
