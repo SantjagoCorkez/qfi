@@ -18,12 +18,15 @@ class User(UserMixin, Base):
         REGULAR = 0
         ADMIN = 1
 
+    @property
     def is_authenticated(self):
         return self.id is not None and self.id > 0
 
+    @property
     def is_active(self):
         return True
 
+    @property
     def is_anonymous(self):
         return False
 

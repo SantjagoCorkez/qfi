@@ -1,4 +1,4 @@
 Flask>=0.11
 SQLAlchemy
-Flask-Login
+Flask-Login>=0.3
 Flask-Principal

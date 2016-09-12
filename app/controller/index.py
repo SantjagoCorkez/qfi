@@ -13,7 +13,7 @@ class Index(object):
     @staticmethod
     @IndexBlueprint.route('/')
     def index():
-        if current_user.is_anonymous():
+        if current_user.is_anonymous:
             return render_template('login_form.html')
         return render_template('index.html')
 

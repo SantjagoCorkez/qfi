@@ -13,7 +13,7 @@ AdminBlueprint = Blueprint('Admin', __name__, url_prefix='/admin')
 def access_restrictor(f):
     @wraps(f)
     def check_and_call(*args, **kwargs):
-        if current_user.is_anonymous() or current_user.type != User.Type.ADMIN:
+        if current_user.is_anonymous or current_user.type != User.Type.ADMIN:
             return render_template('admin/no_access.html')
         return f(*args, **kwargs)
 
